@@ -11,11 +11,11 @@ class ErrorHandler {
         console.error(`Error handled: ${error.message}`);
         console.error(`Error stack: ${error.stack}`);
         
-        const speakOutput = 'Desculpe, tive um problema para fazer isso. Tente de novo.';
+        const speakOutput = 'Perdão, senhor, tive um problema nos meus sistemas. Pode tentar de novo?';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            .reprompt('Tente de novo.')
+            .reprompt('Pode tentar de novo, senhor?')
             .getResponse();
     }
 }

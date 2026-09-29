@@ -8,6 +8,7 @@ const container = new DependencyContainer();
 exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(...container.getRequestHandlers())
     .addErrorHandlers(...container.getErrorHandlers())
+    .withApiClient(new Alexa.DefaultApiClient())
     .lambda();
 
 // Export container for testing

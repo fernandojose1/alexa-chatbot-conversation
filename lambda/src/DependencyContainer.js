@@ -46,7 +46,8 @@ class DependencyContainer {
                 {
                     model: this.config.model,
                     max_tokens: this.config.maxTokens,
-                    temperature: this.config.temperature
+                    temperature: this.config.temperature,
+                    searchModels: this.config.searchModels
                 }
             );
         }
@@ -60,7 +61,11 @@ class DependencyContainer {
         if (!this.instances.conversationService) {
             this.instances.conversationService = new ConversationService(
                 this.getOpenAIRepository(),
-                this.config.systemPrompt
+                this.config.systemPrompt,
+                {
+                    timeZone: this.config.timeZone,
+                    budgetMs: this.config.timeoutMs
+                }
             );
         }
         return this.instances.conversationService;

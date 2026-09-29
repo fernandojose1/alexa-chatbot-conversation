@@ -58,7 +58,7 @@ describe('Lambda Handler Integration Tests', () => {
 
             expect(result).toHaveProperty('response');
             expect(result.response).toHaveProperty('outputSpeech');
-            expect(result.response.outputSpeech.ssml).toContain('Pode perguntar');
+            expect(result.response.outputSpeech.ssml).toContain('Bem-vindo, senhor');
         });
     });
 
@@ -111,7 +111,7 @@ describe('Lambda Handler Integration Tests', () => {
             });
 
             expect(result).toHaveProperty('response');
-            expect(result.response.outputSpeech.ssml).toContain('Você pode me perguntar qualquer coisa');
+            expect(result.response.outputSpeech.ssml).toContain('Pode me perguntar qualquer coisa');
         });
     });
 
@@ -164,7 +164,7 @@ describe('Lambda Handler Integration Tests', () => {
             });
 
             expect(result).toHaveProperty('response');
-            expect(result.response.outputSpeech.ssml).toContain('Tchau');
+            expect(result.response.outputSpeech.ssml).toContain('Até logo, senhor');
         });
     });
 });

@@ -1,23 +1,14 @@
 {
   "name": "alexa-chatbot-conversation",
   "version": "1.0.0",
-  "description": "Utilize Amazon Alexa devices to interface with ChatGPT Conversations",
+  "description": "Jarvis: skill da Alexa em pt-BR que conversa com IA open source gratuita (Groq), com busca na internet",
   "main": "lambda/index.js",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "deploy:skill": "ask deploy --ignore-hash",
-    "deploy:skill-only": "ask deploy --target skill --ignore-hash",
-    "deploy:model": "ask deploy --target model --ignore-hash",
-    "skill:dialog": "ask dialog --locale en-US",
-    "skill:validate": "ask smapi validate-skill --skill-id amzn1.ask.skill.8f78057b-a2b4-4386-b4c4-c99d1f0244d7",
-    "skill:status": "ask smapi get-skill-status --skill-id amzn1.ask.skill.8f78057b-a2b4-4386-b4c4-c99d1f0244d7",
-    "tf:init": "cd terraform && terraform init",
-    "tf:plan": "cd terraform && terraform plan",
-    "tf:apply": "cd terraform && terraform apply",
-    "tf:destroy": "cd terraform && terraform destroy",
-    "build:hosted": "rm -f dist/lambda-alexa-hosted.zip && mkdir -p dist && zip -qr dist/lambda-alexa-hosted.zip lambda/index.js lambda/config.js lambda/package.json lambda/src"
+    "build:hosted": "rm -f dist/lambda-alexa-hosted.zip && mkdir -p dist && zip -qr dist/lambda-alexa-hosted.zip lambda/index.js lambda/config.js lambda/package.json lambda/src",
+    "conversar": "node scripts/conversar.js"
   },
   "repository": {
     "type": "git",
@@ -25,10 +16,13 @@
   },
   "keywords": [
     "alexa",
-    "chatgpt",
-    "openai",
-    "conversation",
-    "skill"
+    "alexa-skill",
+    "groq",
+    "llm",
+    "qwen",
+    "gpt-oss",
+    "pt-br",
+    "jarvis"
   ],
   "author": "",
   "license": "ISC",

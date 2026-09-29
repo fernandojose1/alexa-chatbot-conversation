@@ -3,21 +3,21 @@
     "publishingInformation": {
       "locales": {
         "pt-BR": {
-          "summary": "Converse com uma IA open source pela Alexa",
+          "summary": "O J.A.R.V.I.S. do Homem de Ferro na sua Alexa, com IA open source gratuita",
           "examplePhrases": [
             "Alexa, abrir jarvis assistente",
-            "Alexa, pedir ao jarvis assistente me conta uma piada",
-            "Alexa, perguntar ao jarvis assistente o que é um buraco negro"
+            "Alexa, pedir ao jarvis assistente para me contar uma piada",
+            "Alexa, perguntar ao jarvis assistente se vai chover amanhã"
           ],
           "keywords": [
+            "jarvis",
             "ia",
             "chat",
-            "conversa",
             "assistente",
-            "llama"
+            "homem de ferro"
           ],
           "name": "Jarvis Assistente",
-          "description": "Converse com uma inteligência artificial open source pela Alexa. A skill mantém o contexto da conversa, então você pode fazer perguntas seguidas.",
+          "description": "Converse com o J.A.R.V.I.S. pela Alexa. Ele usa inteligência artificial open source, lembra o contexto da conversa e pesquisa na internet quando precisa de informação atual, como clima, notícias, resultados de jogos e cotações.",
           "smallIconUri": "file://assets/images/small-icon.png",
           "largeIconUri": "file://assets/images/large-icon.png"
         }

@@ -11,11 +11,11 @@ class HelpIntentHandler {
     }
 
     handle(handlerInput) {
-        const speakOutput = 'Você pode me perguntar qualquer coisa começando com frases como: me diga, o que é, quem foi, como, ou me explica. Por exemplo: o que é um buraco negro? O que você quer saber?';
+        const speakOutput = 'Pode me perguntar qualquer coisa, senhor: previsão do tempo, notícias, resultados de jogos, cotações, ou apenas conversar. Eu pesquiso na internet quando necessário. O que deseja?';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            .reprompt('O que você quer perguntar?')
+            .reprompt('O que deseja, senhor?')
             .getResponse();
     }
 }

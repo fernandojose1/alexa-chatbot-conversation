@@ -9,6 +9,10 @@
             {
               "name": "message",
               "type": "AMAZON.SearchQuery"
+            },
+            {
+              "name": "texto",
+              "type": "TEXTO_LIVRE"
             }
           ],
           "samples": [
@@ -56,7 +60,8 @@
             "calcule {message}",
             "escreva {message}",
             "e {message}",
-            "e se {message}"
+            "e se {message}",
+            "{texto}"
           ]
         },
         {
@@ -84,7 +89,263 @@
           "samples": []
         }
       ],
-      "types": []
+      "types": [
+        {
+          "name": "TEXTO_LIVRE",
+          "values": [
+            {
+              "name": {
+                "value": "vai chover amanhã"
+              }
+            },
+            {
+              "name": {
+                "value": "quanto está o dólar"
+              }
+            },
+            {
+              "name": {
+                "value": "quem ganhou o jogo do flamengo ontem"
+              }
+            },
+            {
+              "name": {
+                "value": "qual a previsão do tempo para o fim de semana"
+              }
+            },
+            {
+              "name": {
+                "value": "quais são as notícias de hoje"
+              }
+            },
+            {
+              "name": {
+                "value": "que horas são em tóquio"
+              }
+            },
+            {
+              "name": {
+                "value": "me recomenda um filme de comédia"
+              }
+            },
+            {
+              "name": {
+                "value": "estou pensando em fazer um bolo de cenoura"
+              }
+            },
+            {
+              "name": {
+                "value": "preciso de uma ideia de presente para minha mãe"
+              }
+            },
+            {
+              "name": {
+                "value": "quantos quilômetros tem de são paulo até o rio"
+              }
+            },
+            {
+              "name": {
+                "value": "traduz bom dia para o inglês"
+              }
+            },
+            {
+              "name": {
+                "value": "qual a diferença entre vírus e bactéria"
+              }
+            },
+            {
+              "name": {
+                "value": "bom dia"
+              }
+            },
+            {
+              "name": {
+                "value": "tudo bem com você"
+              }
+            },
+            {
+              "name": {
+                "value": "conta uma história para eu dormir"
+              }
+            },
+            {
+              "name": {
+                "value": "o flamengo joga hoje"
+              }
+            },
+            {
+              "name": {
+                "value": "fala um pouco sobre a segunda guerra mundial"
+              }
+            },
+            {
+              "name": {
+                "value": "qual o melhor horário para regar as plantas"
+              }
+            },
+            {
+              "name": {
+                "value": "meu cachorro está sem apetite o que pode ser"
+              }
+            },
+            {
+              "name": {
+                "value": "quero aprender a tocar violão por onde começo"
+              }
+            },
+            {
+              "name": {
+                "value": "quanto é quinze vezes trinta e dois"
+              }
+            },
+            {
+              "name": {
+                "value": "que dia cai o próximo feriado"
+              }
+            },
+            {
+              "name": {
+                "value": "sugere um nome para um gato preto"
+              }
+            },
+            {
+              "name": {
+                "value": "qual a receita de pão de queijo"
+              }
+            },
+            {
+              "name": {
+                "value": "isso é verdade"
+              }
+            },
+            {
+              "name": {
+                "value": "e depois"
+              }
+            },
+            {
+              "name": {
+                "value": "por quê"
+              }
+            },
+            {
+              "name": {
+                "value": "e no brasil"
+              }
+            },
+            {
+              "name": {
+                "value": "fala mais sobre isso"
+              }
+            },
+            {
+              "name": {
+                "value": "resume em uma frase"
+              }
+            },
+            {
+              "name": {
+                "value": "quem foi santos dumont"
+              }
+            },
+            {
+              "name": {
+                "value": "quanto custa uma viagem para portugal"
+              }
+            },
+            {
+              "name": {
+                "value": "qual time tem mais títulos brasileiros"
+              }
+            },
+            {
+              "name": {
+                "value": "como está o trânsito agora"
+              }
+            },
+            {
+              "name": {
+                "value": "qual é a capital do canadá"
+              }
+            },
+            {
+              "name": {
+                "value": "quero uma frase motivacional"
+              }
+            },
+            {
+              "name": {
+                "value": "qual a temperatura agora"
+              }
+            },
+            {
+              "name": {
+                "value": "qual o valor do bitcoin hoje"
+              }
+            },
+            {
+              "name": {
+                "value": "explica física quântica de um jeito simples"
+              }
+            },
+            {
+              "name": {
+                "value": "me dá uma dica para dormir melhor"
+              }
+            },
+            {
+              "name": {
+                "value": "qual o significado da palavra resiliência"
+              }
+            },
+            {
+              "name": {
+                "value": "estou com dor de cabeça o que eu faço"
+              }
+            },
+            {
+              "name": {
+                "value": "o que eu posso fazer no domingo"
+              }
+            },
+            {
+              "name": {
+                "value": "lembra o que eu te perguntei antes"
+              }
+            },
+            {
+              "name": {
+                "value": "qual música está fazendo sucesso"
+              }
+            },
+            {
+              "name": {
+                "value": "qual o placar do jogo"
+              }
+            },
+            {
+              "name": {
+                "value": "quando começa o horário de verão"
+              }
+            },
+            {
+              "name": {
+                "value": "qual a população do japão"
+              }
+            },
+            {
+              "name": {
+                "value": "escreve um poema sobre o mar"
+              }
+            },
+            {
+              "name": {
+                "value": "você acha que vai fazer frio amanhã"
+              }
+            }
+          ]
+        }
+      ]
     }
   }
 }
