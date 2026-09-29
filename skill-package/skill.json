@@ -5,9 +5,9 @@
         "pt-BR": {
           "summary": "Converse com uma IA open source pela Alexa",
           "examplePhrases": [
-            "Alexa, abrir papo inteligente",
-            "Alexa, pedir ao papo inteligente me conta uma piada",
-            "Alexa, perguntar ao papo inteligente o que é um buraco negro"
+            "Alexa, abrir jarvis assistente",
+            "Alexa, pedir ao jarvis assistente me conta uma piada",
+            "Alexa, perguntar ao jarvis assistente o que é um buraco negro"
           ],
           "keywords": [
             "ia",
@@ -16,14 +16,14 @@
             "assistente",
             "llama"
           ],
-          "name": "Papo Inteligente",
+          "name": "Jarvis Assistente",
           "description": "Converse com uma inteligência artificial open source pela Alexa. A skill mantém o contexto da conversa, então você pode fazer perguntas seguidas.",
           "smallIconUri": "file://assets/images/small-icon.png",
           "largeIconUri": "file://assets/images/large-icon.png"
         }
       },
       "isAvailableWorldwide": true,
-      "testingInstructions": "Diga 'abrir papo inteligente' e faça perguntas.",
+      "testingInstructions": "Diga 'abrir jarvis assistente' e faça perguntas.",
       "category": "KNOWLEDGE_AND_TRIVIA",
       "distributionCountries": []
     },

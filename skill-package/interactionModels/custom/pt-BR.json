@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "papo inteligente",
+      "invocationName": "jarvis assistente",
       "intents": [
         {
           "name": "ChatIntent",

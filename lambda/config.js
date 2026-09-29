@@ -17,7 +17,7 @@ module.exports = {
     temperature: parseFloat(process.env.TEMPERATURE) || 0.7,
     // A Alexa encerra a requisição em ~8s; resposta precisa sair antes disso
     timeoutMs: parseInt(process.env.LLM_TIMEOUT_MS) || 6500,
-    systemPrompt: 'Você é um assistente de voz falando pela Alexa, em português do Brasil. '
+    systemPrompt: 'Você é o Jarvis, um assistente de voz falando pela Alexa, em português do Brasil. '
         + 'Responda de forma natural e curta (no máximo 3 frases), como numa conversa falada. '
         + 'Não use markdown, listas, emojis, tabelas nem links.'
 };
