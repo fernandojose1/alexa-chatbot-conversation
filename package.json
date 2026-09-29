@@ -17,7 +17,7 @@
     "tf:plan": "cd terraform && terraform plan",
     "tf:apply": "cd terraform && terraform apply",
     "tf:destroy": "cd terraform && terraform destroy",
-    "build:hosted": "rm -f dist/lambda-alexa-hosted.zip && mkdir -p dist && cd lambda && zip -qr ../dist/lambda-alexa-hosted.zip index.js config.js package.json src"
+    "build:hosted": "rm -f dist/lambda-alexa-hosted.zip && mkdir -p dist && zip -qr dist/lambda-alexa-hosted.zip lambda/index.js lambda/config.js lambda/package.json lambda/src"
   },
   "repository": {
     "type": "git",

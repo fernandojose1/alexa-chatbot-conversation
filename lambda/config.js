@@ -11,7 +11,8 @@
 module.exports = {
     apiKey: process.env.LLM_API_KEY || 'COLE_SUA_CHAVE_GROQ_AQUI',
     baseURL: process.env.LLM_BASE_URL || 'https://api.groq.com/openai/v1',
-    model: process.env.LLM_MODEL || 'llama-3.3-70b-versatile',
+    // Alternativa mais precisa, porém com respostas mais longas: 'openai/gpt-oss-120b'
+    model: process.env.LLM_MODEL || 'qwen/qwen3.8-27b',
     maxTokens: parseInt(process.env.MAX_TOKENS) || 300,
     temperature: parseFloat(process.env.TEMPERATURE) || 0.7,
     // A Alexa encerra a requisição em ~8s; resposta precisa sair antes disso

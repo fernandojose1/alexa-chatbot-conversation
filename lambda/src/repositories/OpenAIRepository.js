@@ -20,7 +20,7 @@ class OpenAIRepository {
      */
     async getChatCompletion(messages, options = {}) {
         const {
-            model = this.defaults.model || 'llama-3.3-70b-versatile',
+            model = this.defaults.model || 'qwen/qwen3.8-27b',
             max_tokens = this.defaults.max_tokens || 300,
             temperature = this.defaults.temperature ?? 0.7
         } = options;
