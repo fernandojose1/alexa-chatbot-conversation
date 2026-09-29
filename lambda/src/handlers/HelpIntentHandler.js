@@ -11,11 +11,11 @@ class HelpIntentHandler {
     }
 
     handle(handlerInput) {
-        const speakOutput = 'You can ask me any question, and I\'ll use ChatGPT to provide an answer. For example, you can say: tell me a joke, or what is the capital of France? What would you like to know?';
+        const speakOutput = 'Você pode me perguntar qualquer coisa começando com frases como: me diga, o que é, quem foi, como, ou me explica. Por exemplo: o que é um buraco negro? O que você quer saber?';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            .reprompt('What would you like to ask?')
+            .reprompt('O que você quer perguntar?')
             .getResponse();
     }
 }

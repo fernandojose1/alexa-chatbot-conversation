@@ -2,36 +2,33 @@
   "manifest": {
     "publishingInformation": {
       "locales": {
-        "en-US": {
-          "summary": "Chat with ChatGPT through your Alexa device",
+        "pt-BR": {
+          "summary": "Converse com uma IA open source pela Alexa",
           "examplePhrases": [
-            "Alexa, open chat bot",
-            "Alexa, ask chat bot to tell me a joke",
-            "Alexa, ask chat bot what is the weather like"
+            "Alexa, abrir papo inteligente",
+            "Alexa, pedir ao papo inteligente me conta uma piada",
+            "Alexa, perguntar ao papo inteligente o que é um buraco negro"
           ],
           "keywords": [
-            "chatgpt",
+            "ia",
             "chat",
-            "conversation",
-            "ai",
-            "assistant"
+            "conversa",
+            "assistente",
+            "llama"
           ],
-          "name": "ChatGPT Conversation",
-          "description": "Have natural conversations with ChatGPT through your Alexa device. Ask questions, get information, or just chat about anything you'd like. The skill maintains conversation context, so you can have multi-turn dialogues just like you would with the ChatGPT interface.",
+          "name": "Papo Inteligente",
+          "description": "Converse com uma inteligência artificial open source pela Alexa. A skill mantém o contexto da conversa, então você pode fazer perguntas seguidas.",
           "smallIconUri": "file://assets/images/small-icon.png",
           "largeIconUri": "file://assets/images/large-icon.png"
         }
       },
       "isAvailableWorldwide": true,
-      "testingInstructions": "Please use invocation name 'chat conversation' and ask various questions to test the ChatGPT integration.",
+      "testingInstructions": "Diga 'abrir papo inteligente' e faça perguntas.",
       "category": "KNOWLEDGE_AND_TRIVIA",
       "distributionCountries": []
     },
     "apis": {
       "custom": {
-        "endpoint": {
-          "uri": "arn:aws:lambda:us-west-2:981374387644:function:alexa-chatbot-conversation"
-        },
         "interfaces": []
       }
     },
@@ -44,7 +41,7 @@
       "isExportCompliant": true,
       "containsAds": false,
       "locales": {
-        "en-US": {
+        "pt-BR": {
           "privacyPolicyUrl": "https://example.com/privacy.html",
           "termsOfUseUrl": "https://example.com/terms.html"
         }

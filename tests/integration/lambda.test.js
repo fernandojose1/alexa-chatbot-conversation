@@ -58,7 +58,7 @@ describe('Lambda Handler Integration Tests', () => {
 
             expect(result).toHaveProperty('response');
             expect(result.response).toHaveProperty('outputSpeech');
-            expect(result.response.outputSpeech.ssml).toContain('Welcome to ChatGPT Conversation');
+            expect(result.response.outputSpeech.ssml).toContain('Pode perguntar');
         });
     });
 
@@ -111,7 +111,7 @@ describe('Lambda Handler Integration Tests', () => {
             });
 
             expect(result).toHaveProperty('response');
-            expect(result.response.outputSpeech.ssml).toContain('You can ask me any question');
+            expect(result.response.outputSpeech.ssml).toContain('Você pode me perguntar qualquer coisa');
         });
     });
 
@@ -164,7 +164,7 @@ describe('Lambda Handler Integration Tests', () => {
             });
 
             expect(result).toHaveProperty('response');
-            expect(result.response.outputSpeech.ssml).toContain('Goodbye');
+            expect(result.response.outputSpeech.ssml).toContain('Tchau');
         });
     });
 });

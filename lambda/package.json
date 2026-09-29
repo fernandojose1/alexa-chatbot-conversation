@@ -1,0 +1,10 @@
+{
+  "name": "papo-inteligente-lambda",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "ask-sdk-core": "^2.14.0",
+    "ask-sdk-model": "^1.41.1",
+    "openai": "^4.20.1"
+  }
+}

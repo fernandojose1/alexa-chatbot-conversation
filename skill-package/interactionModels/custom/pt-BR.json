@@ -1,0 +1,90 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "papo inteligente",
+      "intents": [
+        {
+          "name": "ChatIntent",
+          "slots": [
+            {
+              "name": "message",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "me diga {message}",
+            "me diz {message}",
+            "me conta {message}",
+            "me explica {message}",
+            "me explique {message}",
+            "explica {message}",
+            "o que é {message}",
+            "o que são {message}",
+            "o que significa {message}",
+            "quem é {message}",
+            "quem foi {message}",
+            "quem são {message}",
+            "como {message}",
+            "como faço {message}",
+            "como eu {message}",
+            "por que {message}",
+            "porque {message}",
+            "qual {message}",
+            "quais {message}",
+            "quanto {message}",
+            "quantos {message}",
+            "quantas {message}",
+            "onde {message}",
+            "quando {message}",
+            "você sabe {message}",
+            "você pode {message}",
+            "pode {message}",
+            "quero saber {message}",
+            "eu quero saber {message}",
+            "pergunta {message}",
+            "tenho uma pergunta {message}",
+            "fala sobre {message}",
+            "fale sobre {message}",
+            "me fala {message}",
+            "me ajuda {message}",
+            "me ajude com {message}",
+            "conta {message}",
+            "sugira {message}",
+            "me dá {message}",
+            "me dê {message}",
+            "traduz {message}",
+            "calcule {message}",
+            "escreva {message}",
+            "e {message}",
+            "e se {message}"
+          ]
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "tchau",
+            "pode parar",
+            "sair"
+          ]
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        }
+      ],
+      "types": []
+    }
+  }
+}

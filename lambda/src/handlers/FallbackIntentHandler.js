@@ -11,11 +11,11 @@ class FallbackIntentHandler {
     }
 
     handle(handlerInput) {
-        const speakOutput = 'Sorry, I didn\'t understand that. You can ask me any question. What would you like to know?';
+        const speakOutput = 'Não entendi. Tente começar com: me diga, o que é, ou me explica. O que você quer saber?';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            .reprompt('What would you like to ask?')
+            .reprompt('O que você quer perguntar?')
             .getResponse();
     }
 }

@@ -12,7 +12,7 @@ class CancelAndStopIntentHandler {
     }
 
     handle(handlerInput) {
-        const speakOutput = 'Goodbye! Thanks for chatting with me.';
+        const speakOutput = 'Tchau! Até a próxima.';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)

@@ -1,4 +1,5 @@
 const OpenAI = require('openai');
+const defaultConfig = require('../config');
 const OpenAIRepository = require('./repositories/OpenAIRepository');
 const ConversationService = require('./services/ConversationService');
 const ChatIntentHandler = require('./handlers/ChatIntentHandler');
@@ -15,12 +16,7 @@ const ErrorHandler = require('./handlers/ErrorHandler');
  */
 class DependencyContainer {
     constructor(config = {}) {
-        this.config = {
-            openaiApiKey: config.openaiApiKey || process.env.OPENAI_API_KEY,
-            openaiModel: config.openaiModel || process.env.OPENAI_MODEL,
-            maxTokens: config.maxTokens || process.env.MAX_TOKENS,
-            temperature: config.temperature || process.env.TEMPERATURE
-        };
+        this.config = { ...defaultConfig, ...config };
 
         this.instances = {};
     }
@@ -31,7 +27,10 @@ class DependencyContainer {
     getOpenAIClient() {
         if (!this.instances.openaiClient) {
             this.instances.openaiClient = new OpenAI({
-                apiKey: this.config.openaiApiKey
+                apiKey: this.config.apiKey,
+                baseURL: this.config.baseURL,
+                timeout: this.config.timeoutMs,
+                maxRetries: 0
             });
         }
         return this.instances.openaiClient;
@@ -43,7 +42,12 @@ class DependencyContainer {
     getOpenAIRepository() {
         if (!this.instances.openaiRepository) {
             this.instances.openaiRepository = new OpenAIRepository(
-                this.getOpenAIClient()
+                this.getOpenAIClient(),
+                {
+                    model: this.config.model,
+                    max_tokens: this.config.maxTokens,
+                    temperature: this.config.temperature
+                }
             );
         }
         return this.instances.openaiRepository;
@@ -55,7 +59,8 @@ class DependencyContainer {
     getConversationService() {
         if (!this.instances.conversationService) {
             this.instances.conversationService = new ConversationService(
-                this.getOpenAIRepository()
+                this.getOpenAIRepository(),
+                this.config.systemPrompt
             );
         }
         return this.instances.conversationService;

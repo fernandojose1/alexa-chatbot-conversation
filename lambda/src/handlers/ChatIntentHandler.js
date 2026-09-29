@@ -3,6 +3,18 @@ const Alexa = require('ask-sdk-core');
 const CONVERSATION_HISTORY_KEY = 'conversationHistory';
 
 /**
+ * Escape characters that would break the SSML wrapper Alexa builds around speech
+ */
+function escapeSsml(text) {
+    return String(text)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&apos;');
+}
+
+/**
  * Chat Intent Handler
  * Handles user chat messages and integrates with ChatGPT
  */
@@ -25,6 +37,13 @@ class ChatIntentHandler {
         
         // Get existing conversation history
         const conversationHistory = sessionAttributes[CONVERSATION_HISTORY_KEY] || [];
+
+        if (!userMessage) {
+            return handlerInput.responseBuilder
+                .speak('Não entendi a pergunta. Pode repetir?')
+                .reprompt('O que você quer saber?')
+                .getResponse();
+        }
         
         try {
             // Process message through conversation service
@@ -35,17 +54,17 @@ class ChatIntentHandler {
             handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
             
             return handlerInput.responseBuilder
-                .speak(result.response)
-                .reprompt('Do you have another question?')
+                .speak(escapeSsml(result.response))
+                .reprompt('Quer perguntar mais alguma coisa?')
                 .getResponse();
                 
         } catch (error) {
             console.error('ChatIntent Error:', error.message, error.stack);
-            const errorMessage = 'Sorry, I encountered an error while processing your request. Please try again.';
+            const errorMessage = 'Desculpe, a inteligência artificial demorou ou falhou ao responder. Tente de novo.';
             
             return handlerInput.responseBuilder
                 .speak(errorMessage)
-                .reprompt('Would you like to try asking something else?')
+                .reprompt('Quer tentar outra pergunta?')
                 .getResponse();
         }
     }

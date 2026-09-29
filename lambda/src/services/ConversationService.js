@@ -3,8 +3,9 @@
  * Manages conversation history and context
  */
 class ConversationService {
-    constructor(openAIRepository) {
+    constructor(openAIRepository, systemPrompt = null) {
         this.openAIRepository = openAIRepository;
+        this.systemPrompt = systemPrompt;
         this.maxHistoryLength = 10;
     }
 
@@ -23,7 +24,11 @@ class ConversationService {
 
         try {
             // Get response from OpenAI
-            const assistantMessage = await this.openAIRepository.getChatCompletion(updatedHistory);
+            // System prompt is sent on every call but not stored in session history
+            const messages = this.systemPrompt
+                ? [{ role: 'system', content: this.systemPrompt }, ...updatedHistory]
+                : updatedHistory;
+            const assistantMessage = await this.openAIRepository.getChatCompletion(messages);
 
             // Add assistant response to history
             updatedHistory.push({

@@ -4,10 +4,12 @@
  */
 class OpenAIRepository {
     /**
-     * @param {Object} openaiClient - OpenAI client instance (injected dependency)
+     * @param {Object} openaiClient - OpenAI-compatible client instance (injected dependency)
+     * @param {Object} defaults - Default options (model, max_tokens, temperature)
      */
-    constructor(openaiClient) {
+    constructor(openaiClient, defaults = {}) {
         this.client = openaiClient;
+        this.defaults = defaults;
     }
 
     /**
@@ -18,9 +20,9 @@ class OpenAIRepository {
      */
     async getChatCompletion(messages, options = {}) {
         const {
-            model = process.env.OPENAI_MODEL || 'gpt-3.5-turbo',
-            max_tokens = parseInt(process.env.MAX_TOKENS) || 150,
-            temperature = parseFloat(process.env.TEMPERATURE) || 0.7
+            model = this.defaults.model || 'llama-3.3-70b-versatile',
+            max_tokens = this.defaults.max_tokens || 300,
+            temperature = this.defaults.temperature ?? 0.7
         } = options;
 
         console.log('OpenAI API Call:', {

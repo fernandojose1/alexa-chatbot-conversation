@@ -10,11 +10,11 @@ class LaunchRequestHandler {
     }
 
     handle(handlerInput) {
-        const speakOutput = 'Go ahead.';
+        const speakOutput = 'Oi! Pode perguntar.';
         
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            .reprompt('Go ahead.')
+            .reprompt('Pode perguntar. Por exemplo: me conta uma piada.')
             .getResponse();
     }
 }
